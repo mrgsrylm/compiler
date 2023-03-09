@@ -12,10 +12,12 @@ func main() {
 
 	fmt.Printf("%v \n", i)
 	fmt.Printf("%T \n", i)
+	fmt.Printf("%% \n")
 	fmt.Printf("%v \n", j)
 	fmt.Printf("%q \n", ya)
 	fmt.Printf("%b \n", i)
-	fmt.Printf("%o \n", 25)
+	fmt.Printf("%d \n", i)
+	fmt.Printf("%o \n", i)
 	fmt.Printf("%x \n", 15)
 	fmt.Printf("%X \n", 15)
 	fmt.Printf("%+q \n", ya)

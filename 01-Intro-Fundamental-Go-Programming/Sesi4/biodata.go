@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt"
-	"gofund/chap4/helpers"
 	"os"
 	"strconv"
+
+	"github.com/gusrylmubarok/test/tree/main/01-Intro-Fundamental-Go-Programming/Sesi4/helpers"
 )
 
 func main() {

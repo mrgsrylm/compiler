@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"gofund/chap3/helpers"
+	"github.com/gusrylmubarok/test/tree/main/01-Intro-Fundamental-Go-Programming/Sesi3/helpers"
 )
 
 func main() {
