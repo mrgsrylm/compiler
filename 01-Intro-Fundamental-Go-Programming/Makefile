@@ -10,5 +10,8 @@ ch3:
 ch4: 
 	go run Sesi4/biodata.go $(no)
 
-ch5:
-	go run Sesi5/challenges5.go
+ch5-1:
+	go run Sesi5/goroutine1.go
+
+ch5-2:
+	go run Sesi5/goroutine2.go
