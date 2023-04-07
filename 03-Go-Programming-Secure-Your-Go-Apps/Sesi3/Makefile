@@ -1,6 +1,9 @@
 run:
 	go run main.go
 
+test:
+	go test -v ./...
+
 container:
 	docker compose -f docker-compose.yml up
 

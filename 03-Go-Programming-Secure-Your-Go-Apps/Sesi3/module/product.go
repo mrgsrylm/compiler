@@ -27,17 +27,17 @@ func (p *Product) BeforeStore(db *gorm.DB) (err error) {
 type ProductRepository interface {
 	Insert(context.Context, *Product) error
 	Update(context.Context, Product, string) (Product, error)
-	// DeleteById(context.Context, string) error
-	// FindAll(context.Context, *[]Product) error
-	// FindById(context.Context, *Product, string)
+	DeleteById(context.Context, string) error
+	FindAll(context.Context, *[]Product) error
+	FindById(context.Context, string) (Product, error)
 }
 
 type ProductUseCase interface {
 	Insert(context.Context, *Product) error
 	Update(context.Context, Product, string) (Product, error)
-	// DeleteById(context.Context, string) error
-	// FindAll(context.Context, *[]Product) error
-	// FindById(context.Context, *Product, string)
+	DeleteById(context.Context, string) error
+	FindAll(context.Context, *[]Product) error
+	FindById(context.Context, string) (Product, error)
 }
 
 type ProductRequest struct {

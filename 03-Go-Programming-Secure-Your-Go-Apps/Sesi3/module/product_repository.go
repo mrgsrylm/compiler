@@ -48,3 +48,45 @@ func (p *productRepository) Update(ctx context.Context, newProduct Product, id s
 
 	return product, nil
 }
+
+func (p *productRepository) DeleteById(ctx context.Context, id string) (err error) {
+	ctx, cancel := context.WithTimeout(ctx, 5*time.Second)
+	defer cancel()
+
+	product := Product{}
+
+	if err = p.db.WithContext(ctx).First(&product, "id = ?", &id).Error; err != nil {
+		return err
+	}
+
+	if err = p.db.WithContext(ctx).Delete(&product, "id = ?", &id).Error; err != nil {
+		return err
+	}
+
+	return
+}
+
+func (p *productRepository) FindAll(ctx context.Context, products *[]Product) (err error) {
+	ctx, cancel := context.WithTimeout(ctx, 5*time.Second)
+	defer cancel()
+
+	if err = p.db.WithContext(ctx).Find(&products).Error; err != nil {
+		return err
+	}
+	return
+}
+
+func (p *productRepository) FindById(ctx context.Context, id string) (product Product, err error) {
+	ctx, cancel := context.WithTimeout(ctx, 5*time.Second)
+	defer cancel()
+
+	product = Product{}
+
+	if err = p.db.WithContext(ctx).First(&product, "id = ?", &id).Error; err != nil {
+		return product, err
+	}
+
+	fmt.Println(product)
+
+	return product, nil
+}
