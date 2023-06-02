@@ -1,6 +1,0 @@
-CREATE TABLE book (
-    id SERIAL PRIMARY KEY,
-    title VARCHAR(100) NOT NULL,
-    author VARCHAR(100) NOT NULL,
-    desc_book VARCHAR(100) NOT NULL
-);
